@@ -5,7 +5,12 @@
   <div>
     tdesign version: {{ tdesign.version }}
   </div>
-  <t-button @click="handleShow">按钮1</t-button>
+  <t-button @click="handleShow">
+    按钮1
+    <template #icon>
+      <add-icon />
+    </template>
+  </t-button>
   <t-form>
     <t-form-item label="用户名">
       <t-input />

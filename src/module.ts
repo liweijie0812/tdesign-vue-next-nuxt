@@ -1,13 +1,15 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule } from '@nuxt/kit'
 import { resolveComponents } from './composables/useComponents'
 import { resolveImports } from './composables/useImports'
 import { allComponents, allPlugins, libraryName } from './composables/useTDesign'
+import { allIcons, resolveIcons } from './composables/useTDesignIcons'
 
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   components: string[]
   imports: string[]
+  icons: string[]
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -18,13 +20,17 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     components: allComponents,
-    imports: allPlugins
+    imports: allPlugins,
+    icons: allIcons
   },
   setup(options, nuxt) {
     nuxt.options.build.transpile.push(libraryName)
 
     nuxt.options.imports.autoImport !== false && resolveImports(options.imports)
-    nuxt.options.components !== false && resolveComponents(options.components)
+    if (nuxt.options.components !== false) {
+      resolveComponents(options.components)
+      resolveIcons(options.icons)
+    }
 
 
     // const resolver = createResolver(import.meta.url)

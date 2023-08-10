@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.6.5",
+    "tdesign-icons-vue-next": "^0.2.0",
     "tdesign-vue-next": "^1.4.2"
   },
   "devDependencies": {
