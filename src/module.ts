@@ -8,7 +8,7 @@ import { allIcons, resolveIcons } from './composables/useTDesignIcons'
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   components: string[]
-  imports: string[]
+  plugins: string[]
   icons: string[]
 }
 
@@ -20,13 +20,13 @@ export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
   defaults: {
     components: allComponents,
-    imports: allPlugins,
+    plugins: allPlugins,
     icons: allIcons
   },
   setup(options, nuxt) {
     nuxt.options.build.transpile.push(libraryName+'/es')
 
-    nuxt.options.imports.autoImport !== false && resolveImports(options.imports)
+    nuxt.options.imports.autoImport !== false && resolveImports(options.plugins)
     if (nuxt.options.components !== false) {
       resolveComponents(options.components)
       resolveIcons(options.icons)
