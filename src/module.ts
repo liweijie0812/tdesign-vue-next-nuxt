@@ -25,6 +25,8 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup(options, nuxt) {
     nuxt.options.build.transpile.push(libraryName+'/es')
+    
+    nuxt.options.css.push('tdesign-vue-next/es/style/index.css')
 
     nuxt.options.imports.autoImport !== false && resolveImports(options.plugins)
     if (nuxt.options.components !== false) {
