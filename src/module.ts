@@ -24,7 +24,7 @@ export default defineNuxtModule<ModuleOptions>({
     icons: allIcons
   },
   setup(options, nuxt) {
-    nuxt.options.build.transpile.push(libraryName)
+    nuxt.options.build.transpile.push(libraryName+'/es')
 
     nuxt.options.imports.autoImport !== false && resolveImports(options.imports)
     if (nuxt.options.components !== false) {
