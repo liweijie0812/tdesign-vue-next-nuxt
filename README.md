@@ -61,19 +61,25 @@ That's it! You can now use My Module in your Nuxt app ✨
 
 - Type: `array`
 
-e.g. `['Button']`
+  default: All Components
+
+  e.g. `['Button']`
 
 ### plugins
 
 - Type: `array`
 
-e.g. `['MessagePlugin']`
+  default: All Plugins
+
+  e.g. `['MessagePlugin']`
 
 ### icons
 
 - Type: `array`
 
-e.g. `['AddIcon']`
+  default: All Icons
+
+  e.g. `['AddIcon']`
 
 ## Development
 
