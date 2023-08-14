@@ -1,8 +1,6 @@
 import { defineNuxtModule } from '@nuxt/kit'
-import { resolveComponents } from './composables/useComponents'
-import { resolveImports } from './composables/useImports'
-import { allComponents, allPlugins, libraryName } from './composables/useTDesign'
-import { allIcons, resolveIcons } from './composables/useTDesignIcons'
+import { allComponents, allPlugins, resolveComponents, resolvePlugins,libraryName } from './core/tdesign'
+import { allIcons, resolveIcons } from './core/tdesign-icons'
 
 
 // Module options TypeScript interface definition
@@ -24,9 +22,12 @@ export default defineNuxtModule<ModuleOptions>({
     icons: allIcons
   },
   setup(options, nuxt) {
-    nuxt.options.css.push('tdesign-vue-next/es/style/index.css')
+    nuxt.options.css.push(`${libraryName}/es/style/index.css`)
 
-    nuxt.options.imports.autoImport !== false && resolveImports(options.plugins)
+    if (nuxt.options.imports.autoImport !== false){
+      resolvePlugins(options.plugins)
+    } 
+
     if (nuxt.options.components !== false) {
       resolveComponents(options.components)
       resolveIcons(options.icons)
@@ -38,3 +39,4 @@ export default defineNuxtModule<ModuleOptions>({
     // addPlugin(resolver.resolve('./runtime/plugin'))
   }
 })
+

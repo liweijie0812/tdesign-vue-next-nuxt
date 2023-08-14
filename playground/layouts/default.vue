@@ -14,7 +14,7 @@
         <t-menu-item value="resource">
           <template #icon>
             <ServerIcon />
-          </template> 
+          </template>
           资源列表
         </t-menu-item>
         <t-menu-item value="root">
