@@ -9,10 +9,18 @@
       </t-form-item>
       <t-form-item label="课程" name="course" initial-data="['1']">
         <t-checkbox-group>
-          <t-checkbox value="1">语文</t-checkbox>
-          <t-checkbox value="2">数学</t-checkbox>
-          <t-checkbox value="3">英语</t-checkbox>
-          <t-checkbox value="4">体育</t-checkbox>
+          <t-checkbox value="1">
+            语文
+          </t-checkbox>
+          <t-checkbox value="2">
+            数学
+          </t-checkbox>
+          <t-checkbox value="3">
+            英语
+          </t-checkbox>
+          <t-checkbox value="4">
+            体育
+          </t-checkbox>
         </t-checkbox-group>
       </t-form-item>
     </t-form>
