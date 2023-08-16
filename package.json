@@ -31,7 +31,7 @@
   "dependencies": {
     "@nuxt/kit": "^3.6.5",
     "tdesign-icons-vue-next": "^0.2.0",
-    "tdesign-vue-next": "^1.4.2"
+    "tdesign-vue-next": "^1.5.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.2",
@@ -40,9 +40,9 @@
     "@nuxt/module-builder": "^0.4.0",
     "@nuxt/schema": "^3.6.5",
     "@nuxt/test-utils": "^3.6.5",
-    "@types/node": "^18.17.4",
+    "@types/node": "^18.17.5",
     "changelogen": "^0.5.4",
-    "eslint": "^8.46.0",
+    "eslint": "^8.47.0",
     "nuxt": "^3.6.5",
     "vitest": "^0.34.1"
   }
