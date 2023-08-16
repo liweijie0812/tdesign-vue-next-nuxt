@@ -1,9 +1,4 @@
 {
   "root": true,
-  "extends": ["@antfu"],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": [
-      "off"
-    ]
-  }
+  "extends": ["@antfu"]
 }
